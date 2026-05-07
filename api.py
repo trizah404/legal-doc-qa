@@ -1,6 +1,9 @@
 import sys
 sys.path.append('src')
 
+import os
+PORT = int(os.environ.get("PORT", 7860))
+
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
